@@ -10,7 +10,15 @@ class Main
       config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
     end
 
-    @client.update 'foo'
+    t = Time.now
+    wday = [nil, '月', '火', '水', '木', '金', nil][t.wday]
+    if wday
+      3.times do |i|
+        ymdh = t.year * 1_000_000 + t.month * 10_000 + t.day * 100 + i + 18
+        @client.update "TBSラジオ アフター6ジャンクション #{t.year}年#{t.month}月#{t.day}日 #{wday}曜日 #{i + 1}枠目 radiko タイムフリー https://radiko.jp/#!/ts/TBS/#{ymdh}0000"
+        puts 'ツイートしました'
+      end
+    end
   end
 end
 
