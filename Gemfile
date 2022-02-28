@@ -8,3 +8,5 @@ gem 'dotenv'
 gem 'guard-rubocop'
 gem 'rubocop'
 gem 'twitter'
+
+gem "functions_framework", "~> 1.1"
