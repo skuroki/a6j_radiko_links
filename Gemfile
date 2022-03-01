@@ -10,3 +10,4 @@ gem 'rubocop'
 gem 'twitter'
 
 gem "functions_framework", "~> 1.1"
+gem 'puma', '4.3.11'

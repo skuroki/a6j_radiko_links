@@ -1,5 +1,6 @@
 require 'dotenv/load'
 require 'twitter'
+require 'functions_framework'
 
 class Main
   def self.run
@@ -22,4 +23,6 @@ class Main
   end
 end
 
-Main.run
+FunctionsFramework.cloud_event 'tweet_links' do |_event|
+  Main.run
+end
