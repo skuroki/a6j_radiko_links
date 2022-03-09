@@ -18,6 +18,7 @@ class Main
         ymdh = t.year * 1_000_000 + t.month * 10_000 + t.day * 100 + i + 18
         @client.update "TBSラジオ アフター6ジャンクション #{t.year}年#{t.month}月#{t.day}日 #{wday}曜日 #{i + 1}枠目 radiko タイムフリー https://radiko.jp/share/?sid=TBS&t=#{ymdh}0000"
         puts 'ツイートしました'
+        sleep 10
       end
     end
   end
